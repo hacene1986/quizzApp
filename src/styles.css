@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+  margin: 0;
+  padding: 0;
+}
+section{
+  /* border: 10px solid grey; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #33ccff 0%, #6600cc 100%);
+}
+.container{
+  border-radius: 50px;
+  max-width: 1200px;
+  margin: auto;
+  /*height: 70vh;*/
+  background: linear-gradient(to right, #9dd3d3 0%, #666699 100%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: ghostwhite;
+  box-shadow: 4px 8px 60px #343131;
+  padding: 40px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.btn {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  width: 20rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* #count{
+  position: absolute;
+  right: 388px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bolder;
+  font-size: 25px;
+  top: 18px;
+} */
+

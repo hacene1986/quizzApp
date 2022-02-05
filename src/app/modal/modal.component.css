@@ -1,0 +1,16 @@
+button{
+  font-weight: none;
+  font-size: 0.9rem;
+  width: 5rem;
+  padding: none;
+  cursor: pointer;
+
+}
+.modal-body{
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.modal-content{
+  top: 235px;
+}

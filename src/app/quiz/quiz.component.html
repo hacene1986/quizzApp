@@ -1,0 +1,50 @@
+<section>
+  <div class="container">
+    <button class="btn btn-danger exit" (click)="showDialogConfirm()">Quitter le Quiz</button>
+    <div id="count"></div>
+    <div @answer class="quiz" *ngIf="prevAnswered.length < 11 && gameOver == false">
+      <div class="score">
+        <h5 class="text-center">Score: {{ correctAnswers }}</h5>
+        <h5 class="text-center">Meilleur Score: {{ heighScore }}</h5>
+      </div>
+      <h1>{{ quizzes[currentQuiz].question }}</h1>
+      <img  src="{{ quizzes[currentQuiz].image }}" alt="Card image cap" style="width: 40%;">
+      <div class="buttons">
+        <div class="" *ngFor="let quiz of quizzes[currentQuiz].answer">
+          <div>
+              <button class="btn btn-primary" (click)="onAnswer(quiz.correct)">{{quiz.option}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Bloc Result-->
+    <div class="result" *ngIf="prevAnswered.length > 10">
+      <button class="btn btn-primary" (click)="playAgain()">Rejouer</button>
+      <div class="note">
+        Bonnes réponses: {{ correctAnswers }} | Mauvaise Réponses: {{ incorrectAnswers }}
+      </div>
+    </div>
+
+    <!--Bloc GAME OVER-->
+    <div *ngIf="gameOver && prevAnswered.length < 10">
+      <h5 class="text-center">Score: {{ correctAnswers }}</h5>
+      <div class="waviy">
+        <span style="--i:1">G</span>
+        <span style="--i:2">A</span>
+        <span style="--i:3">M</span>
+        <span style="--i:4">E</span>
+        <span style="--i:5">&nbsp;</span>
+        <span style="--i:6">O</span>
+        <span style="--i:7">V</span>
+        <span style="--i:8">E</span>
+        <span style="--i:9">R</span>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary" (click)="playAgain()">Rejouer</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+

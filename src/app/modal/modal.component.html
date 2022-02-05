@@ -1,0 +1,24 @@
+<div *ngIf="modalInfo" class="modal" tabindex="-1" role="dialog" style="display:block!important">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{modalInfo.title}}</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center confirm-message">{{modalInfo.text}}</p>
+          </div>
+        </div>
+        <div class="modal-footer" *ngIf="modalInfo.type == 'confirm'">
+          <button type="button" class="btn btn-secondary" (click)="modalInfo.noFn()">Non</button>
+          <button type="button" class="btn btn-primary" (click)="modalInfo.siFn()">Oui</button>
+
+        </div>
+        <div class="modal-footer" *ngIf="modalInfo.type == 'alert'">
+          <button type="button" class="btn btn-primary" (click)="modalInfo.siFn()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
